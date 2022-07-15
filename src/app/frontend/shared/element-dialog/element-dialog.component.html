@@ -2,20 +2,28 @@
 <h1 *ngIf="isChange" mat-dialog-title>Editar Cadastro do Contribuinte</h1>
 <div mat-dialog-content>
   <mat-form-field appearance="fill">
-    <mat-label>Position</mat-label>
-    <input matInput [(ngModel)]="data.position">
+    <mat-label>Id</mat-label>
+    <input matInput [(ngModel)]="data.id">
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Nome</mat-label>
-    <input matInput [(ngModel)]="data.name">
+    <input matInput [(ngModel)]="data.nome">
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Peso</mat-label>
-    <input matInput [(ngModel)]="data.weight">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email">
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Símbolo</mat-label>
-    <input matInput [(ngModel)]="data.symbol">
+    <mat-label>Telefone</mat-label>
+    <input matInput [(ngModel)]="data.telefone">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Celular</mat-label>
+    <input matInput [(ngModel)]="data.celular">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Endereços</mat-label>
+    <input matInput [(ngModel)]="data.enderecos">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
