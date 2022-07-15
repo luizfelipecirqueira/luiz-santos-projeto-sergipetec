@@ -1,6 +1,6 @@
 <div class="container">
 
-    <button mat-button color="primary" (click)="openDialog(null)">Add Contribuinte</button>
+    <button mat-button color="primary" (click)="openDialog(null)">Cadastrar Contribuinte</button>
 
 <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
@@ -44,7 +44,7 @@
             <button mat-icon-button color="primary" (click)="editElement(element)">
                 <mat-icon>edit</mat-icon>
               </button>
-              <button mat-icon-button color="primary" (click)="deleteElement(element.position)">
+              <button mat-icon-button color="primary" (click)="deleteElement(element.id)">
                 <mat-icon>delete</mat-icon>
               </button>
         </td>

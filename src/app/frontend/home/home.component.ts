@@ -1,9 +1,10 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { ElementDialogComponent } from 'src/app/frontend/shared/element-dialog/element-dialog.component';
-import { PeriodicElement } from 'src/app/models/PeriodicElement';
-import { PeriodicElemenntService } from 'src/app/services/periodic-element.service';
+import { PeriodicElement } from 'src/app/backend/models/PeriodicElement';
+import { PeriodicElemenntService } from 'src/app/backend/services/periodic-element.service';
 
 @Component({
   selector: 'app-home',
@@ -57,13 +58,18 @@ export class HomeComponent implements OnInit {
           this.dataSource[result.id - 1] = result;
           this.table.renderRows();
         }
-        this.dataSource.push(result);
-        this.table.renderRows();
+        else{
+          this.periodicElementService.createElements(result).subscribe((data: PeriodicElement) => {
+            this.dataSource.push(result);
+            this.table.renderRows();
+          })
+        }
       }
     });
   }
 
   deleteElement(id: number): void{
+    this.periodicElementService.deleteElement(id).subscribe(() => {})
     this.dataSource = this.dataSource.filter(p => p.id !== id);
   }
 

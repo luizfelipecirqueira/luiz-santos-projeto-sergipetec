@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { PeriodicElement } from 'src/app/models/PeriodicElement';
+import { PeriodicElement } from 'src/app/backend/models/PeriodicElement';
 
 @Component({
   selector: 'app-element-dialog',
