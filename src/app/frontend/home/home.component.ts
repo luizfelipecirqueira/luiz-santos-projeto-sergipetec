@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
-import { ElementDialogComponent } from 'src/app/shared/element-dialog/element-dialog.component';
+import { ElementDialogComponent } from 'src/app/frontend/shared/element-dialog/element-dialog.component';
 
 export interface PeriodicElement {
   name: string;
@@ -47,15 +47,32 @@ export class HomeComponent implements OnInit {
         name: '',
         weight: null,
         symbol: ''
-      } : element
+      } : {
+        position: element.position,
+        name: element.name,
+        weight: element.weight,
+        symbol: element.symbol,
+        } 
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if(result !== undefined){
+        if(this.dataSource.map(p => p.position).includes(result.position)){
+          this.dataSource[result.position - 1] = result;
+          this.table.renderRows();
+        }
         this.dataSource.push(result);
         this.table.renderRows();
       }
     });
+  }
+
+  deleteElement(position: number): void{
+    this.dataSource = this.dataSource.filter(p => p.position !== position);
+  }
+
+  editElement(element: PeriodicElement): void{
+    this.openDialog(element);
   }
 
 }

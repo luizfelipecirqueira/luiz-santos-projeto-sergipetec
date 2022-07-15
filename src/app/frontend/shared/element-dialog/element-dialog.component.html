@@ -1,6 +1,6 @@
-<h1 mat-dialog-title>Cadastro do Contribuinte</h1>
+<h1 *ngIf="!isChange" mat-dialog-title>Cadastro do Contribuinte</h1>
+<h1 *ngIf="isChange" mat-dialog-title>Editar Cadastro do Contribuinte</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
   <mat-form-field appearance="fill">
     <mat-label>Position</mat-label>
     <input matInput [(ngModel)]="data.position">
@@ -20,5 +20,6 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button>Cancelar</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Cadastrar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="isChange">Editar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="!isChange">Cadastrar</button>
 </div>
