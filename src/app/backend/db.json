@@ -10,25 +10,6 @@
       "enderecos": "teste"
     },
     {
-      "id": 2,
-      "nome": "JOÃO AUGUSTO DE SOUZA",
-      "email": "jaugusto@gmail.com",
-      "cpf": "17737300023",
-      "telefone": "7932100055",
-      "celular": "799940033466",
-      "enderecos": [
-        {
-          "rua": "Romero Brito",
-          "numero": "59",
-          "bairro": "América",
-          "cidade": "Campo Grande",
-          "cep": "79002000",
-          "estado": "Mato Grosso do Sul",
-          "pais": "Brasil"
-        }
-      ]
-    },
-    {
       "id": "3",
       "nome": "Luiz",
       "email": "teste@gmail.com",
@@ -38,34 +19,6 @@
       "enderecos": "teste"
     },
     {
-      "id": "4",
-      "nome": "MARIA CRISTINA PEREIRA",
-      "email": "mcristina@gmail.com",
-      "cpf": "93958790097",
-      "telefone": "7932100044",
-      "celular": "79994003345",
-      "enderecos": [
-        {
-          "rua": "Pablo Picasso",
-          "numero": "43",
-          "bairro": "Suiça",
-          "cidade": "Aracaju",
-          "cep": "49000000",
-          "estado": "Sergipe",
-          "pais": "Brasil"
-        },
-        {
-          "rua": "João Ribeiro",
-          "numero": "1003",
-          "bairro": "Cardoso",
-          "cidade": "Joinville",
-          "cep": "09530210",
-          "estado": "Santa Catarina",
-          "pais": "Brasil"
-        }
-      ]
-    },
-    {
       "id": "5",
       "nome": "Teste Luiz",
       "email": "teste@gmail.com",
@@ -73,15 +26,6 @@
       "telefone": "7932584458",
       "celular": "79999885486",
       "enderecos": "testes"
-    },
-    {
-      "nome": "Joao",
-      "email": "joao@gmail.com",
-      "cpf": "066.398.315-03",
-      "telefone": "7933558965",
-      "celular": "79988548563",
-      "enderecos": "teste endereço",
-      "id": "mG19OKG"
     }
   ]
 }

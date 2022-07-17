@@ -27,14 +27,14 @@ export class PeriodicElemenntService {
 
   editElement(element: PeriodicElement): Observable<PeriodicElement>{
     return this.http.put<PeriodicElement>(this.elementApiUrl + '/' + element.id, element).pipe(
-      retry(2),
+      retry(1),
       catchError(this.handleError)
     );
   }
 
   deleteElement(id: number): Observable<any>{
-    return this.http.delete<any>(`${this.elementApiUrl}?id=${id}`).pipe(
-      retry(2),
+    return this.http.delete<any>(this.elementApiUrl + '/' + id, ).pipe(
+      retry(1),
       catchError(this.handleError)
     );
   }
