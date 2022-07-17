@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
     const dialogRef = this.dialog.open(ElementDialogComponent, {
       width: '250px',
       data: element === null ? {
-        id: null,
         nome: '',
         email: '',
         cpf: null,
@@ -55,12 +54,15 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result !== undefined){
         if(this.dataSource.map(p => p.id).includes(result.id)){
-          this.dataSource[result.id - 1] = result;
-          this.table.renderRows();
+          this.periodicElementService.editElement(result).subscribe((data: PeriodicElement) => {
+            const index = this.dataSource.findIndex(p => p.id === data.id);
+            this.dataSource[index] = data;
+            this.table.renderRows();
+          })
         }
         else{
           this.periodicElementService.createElements(result).subscribe((data: PeriodicElement) => {
-            this.dataSource.push(result);
+            this.dataSource.push(data);
             this.table.renderRows();
           })
         }
