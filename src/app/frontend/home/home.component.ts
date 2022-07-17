@@ -27,7 +27,10 @@ export class HomeComponent implements OnInit {
       });
     }
 
-  ngOnInit(): void {
+    
+
+  ngOnInit(){
+
   }
 
   openDialog(element: PeriodicElement | null): void{

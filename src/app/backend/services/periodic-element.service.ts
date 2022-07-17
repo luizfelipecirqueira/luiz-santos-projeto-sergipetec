@@ -12,7 +12,9 @@ export class PeriodicElemenntService {
   constructor(private http:HttpClient){}
 
   getElements(): Observable<PeriodicElement[]>{
-    return this.http.get<PeriodicElement[]>(this.elementApiUrl);
+    return this.http.get<PeriodicElement[]>(this.elementApiUrl).pipe(
+      retry(2),
+      catchError(this.handleError));
     
   }
 
