@@ -1,4 +1,4 @@
-export interface PeriodicElement {
+export interface ContribuinteElement {
     id: number;
     position: number;
     nome: string;

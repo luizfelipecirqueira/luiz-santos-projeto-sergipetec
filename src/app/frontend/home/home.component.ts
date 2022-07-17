@@ -2,27 +2,27 @@ import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
-import { ElementDialogComponent } from 'src/app/frontend/shared/element-dialog/element-dialog.component';
-import { PeriodicElement } from 'src/app/backend/models/PeriodicElement';
-import { PeriodicElemenntService } from 'src/app/backend/services/periodic-element.service';
+import { ContribuinteDialogComponent } from 'src/app/frontend/shared/contribuinte-dialog/contribuinte-dialog.component';
+import { ContribuinteElement } from 'src/app/backend/models/ContribuinteElement';
+import { ContribuinteElementService } from 'src/app/backend/services/contribuinte-service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [PeriodicElemenntService],
+  providers: [ContribuinteElementService],
 })
 
 export class HomeComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<any>;
   displayedColumns: string[] = ['id', 'nome', 'email', 'cpf', 'telefone', 'celular', 'enderecos', "actions"];
-  dataSource!: PeriodicElement[];
+  dataSource!: ContribuinteElement[];
 
   constructor(public dialog: MatDialog,
-    public periodicElementService: PeriodicElemenntService
+    public ContribuinteElementService: ContribuinteElementService
     ) {
-      this.periodicElementService.getElements().subscribe((data: PeriodicElement[]) => {
+      this.ContribuinteElementService.getElements().subscribe((data: ContribuinteElement[]) => {
         this.dataSource = data;
       });
     }
@@ -33,8 +33,8 @@ export class HomeComponent implements OnInit {
 
   }
 
-  openDialog(element: PeriodicElement | null): void{
-    const dialogRef = this.dialog.open(ElementDialogComponent, {
+  openDialog(element: ContribuinteElement | null): void{
+    const dialogRef = this.dialog.open(ContribuinteDialogComponent, {
       width: '250px',
       data: element === null ? {
         nome: '',
@@ -57,14 +57,14 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result !== undefined){
         if(this.dataSource.map(p => p.id).includes(result.id)){
-          this.periodicElementService.editElement(result).subscribe((data: PeriodicElement) => {
+          this.ContribuinteElementService.editContribuinte(result).subscribe((data: ContribuinteElement) => {
             const index = this.dataSource.findIndex(p => p.id === data.id);
             this.dataSource[index] = data;
             this.table.renderRows();
           })
         }
         else{
-          this.periodicElementService.createElements(result).subscribe((data: PeriodicElement) => {
+          this.ContribuinteElementService.createContribuinte(result).subscribe((data: ContribuinteElement) => {
             this.dataSource.push(data);
             this.table.renderRows();
           })
@@ -73,12 +73,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  deleteElement(id: number): void{
-    this.periodicElementService.deleteElement(id).subscribe(() => {})
+  deleteContribuinte(id: number): void{
+    this.ContribuinteElementService.deleteContribuinte(id).subscribe(() => {})
     this.dataSource = this.dataSource.filter(p => p.id !== id);
   }
 
-  editElement(element: PeriodicElement): void{
+  editContribuinte(element: ContribuinteElement): void{
     this.openDialog(element);
   }
 

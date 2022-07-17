@@ -1,20 +1,20 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { PeriodicElement } from 'src/app/backend/models/PeriodicElement';
+import { ContribuinteElement } from 'src/app/backend/models/ContribuinteElement';
 
 @Component({
   selector: 'app-element-dialog',
-  templateUrl: './element-dialog.component.html',
-  styleUrls: ['./element-dialog.component.scss']
+  templateUrl: './contribuinte-dialog.component.html',
+  styleUrls: ['./contribuinte-dialog.component.scss']
 })
-export class ElementDialogComponent implements OnInit {
-  element!:PeriodicElement;
+export class ContribuinteDialogComponent implements OnInit {
+  element!:ContribuinteElement;
   isChange!: boolean;
 
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: PeriodicElement,
-    public dialogRef: MatDialogRef<ElementDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: ContribuinteElement,
+    public dialogRef: MatDialogRef<ContribuinteDialogComponent>,
   ) {}
 
   onNoClick(): void {

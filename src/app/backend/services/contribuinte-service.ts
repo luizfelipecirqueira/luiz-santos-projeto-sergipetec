@@ -2,37 +2,37 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { PeriodicElement } from '../models/PeriodicElement';
+import { ContribuinteElement } from '../models/ContribuinteElement';
 
 @Injectable()
-export class PeriodicElemenntService {
+export class ContribuinteElementService {
   
   elementApiUrl = "http://localhost:3000/contribuintes/";
   
   constructor(private http:HttpClient){}
 
-  getElements(): Observable<PeriodicElement[]>{
-    return this.http.get<PeriodicElement[]>(this.elementApiUrl).pipe(
+  getElements(): Observable<ContribuinteElement[]>{
+    return this.http.get<ContribuinteElement[]>(this.elementApiUrl).pipe(
       retry(2),
       catchError(this.handleError));
     
   }
 
-  createElements(element: PeriodicElement): Observable<PeriodicElement>{
-    return this.http.post<PeriodicElement>(this.elementApiUrl, element).pipe(
+  createContribuinte(element: ContribuinteElement): Observable<ContribuinteElement>{
+    return this.http.post<ContribuinteElement>(this.elementApiUrl, element).pipe(
       retry(2),
       catchError(this.handleError)
     );
   }
 
-  editElement(element: PeriodicElement): Observable<PeriodicElement>{
-    return this.http.put<PeriodicElement>(this.elementApiUrl + '/' + element.id, element).pipe(
+  editContribuinte(element: ContribuinteElement): Observable<ContribuinteElement>{
+    return this.http.put<ContribuinteElement>(this.elementApiUrl + '/' + element.id, element).pipe(
       retry(1),
       catchError(this.handleError)
     );
   }
 
-  deleteElement(id: number): Observable<any>{
+  deleteContribuinte(id: number): Observable<any>{
     return this.http.delete<any>(this.elementApiUrl + '/' + id, ).pipe(
       retry(1),
       catchError(this.handleError)
