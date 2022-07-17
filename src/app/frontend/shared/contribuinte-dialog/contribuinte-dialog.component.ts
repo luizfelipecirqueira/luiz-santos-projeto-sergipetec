@@ -17,7 +17,7 @@ export class ContribuinteDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<ContribuinteDialogComponent>,
   ) {}
 
-  onNoClick(): void {
+  onCancelar(): void {
     this.dialogRef.close();
   }
 

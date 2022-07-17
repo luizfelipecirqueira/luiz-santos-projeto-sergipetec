@@ -29,7 +29,7 @@
   </form>
 </div>
 <div mat-dialog-actions>
-  <button mat-button>Cancelar</button>
+  <button mat-button (click)="onCancelar()">Cancelar</button>
   <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="isChange">Editar</button>
   <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="!isChange" [disabled]="!f.valid">Cadastrar</button>
 </div>
