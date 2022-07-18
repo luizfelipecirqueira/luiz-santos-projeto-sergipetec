@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
@@ -42,7 +41,15 @@ export class HomeComponent implements OnInit {
         cpf: null,
         telefone: null,
         celular: null,
-        enderecos: '',
+        enderecos: [
+          { rua: '' },
+          { numero: null },
+          { bairro: '' },
+          { cidade: '' },
+          { cep: null },
+          { estado: '' },
+          { pais: '' },
+        ]
       } : {
         id: element.id,
         nome: element.nome,
@@ -50,7 +57,15 @@ export class HomeComponent implements OnInit {
         cpf: element.cpf,
         telefone: element.telefone,
         celular: element.celular,
-        enderecos: element.enderecos,
+        enderecos: [
+          { rua: element.enderecos[0].rua },
+          { numero: element.enderecos[1].numero },
+          { bairro: element.enderecos[2].bairro },
+          { cidade: element.enderecos[3].cidade },
+          { cep: element.enderecos[4].cep },
+          { estado: element.enderecos[5].estado },
+          { pais: element.enderecos[6].pais },
+        ]
         } 
     });
 
