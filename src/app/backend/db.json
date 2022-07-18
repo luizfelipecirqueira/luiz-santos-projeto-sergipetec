@@ -9,10 +9,10 @@
       "celular": "79994003345",
       "enderecos": [
         {
-          "rua": "teste"
+          "rua": "Rua teste"
         },
         {
-          "numero": 49
+          "numero": 50
         },
         {
           "bairro": "teste"
@@ -40,10 +40,10 @@
       "celular": 79999998575,
       "enderecos": [
         {
-          "rua": "teste"
+          "rua": "Rua teste"
         },
         {
-          "numero": 45
+          "numero": 30
         },
         {
           "bairro": "teste"
