@@ -42,7 +42,15 @@ export class HomeComponent implements OnInit {
         cpf: null,
         telefone: null,
         celular: null,
-        enderecos: '',
+        enderecos: [
+          { rua: '' },
+          { numero: null },
+          { bairro: '' },
+          { cidade: '' },
+          { cep: null },
+          { estado: '' },
+          { pais: '' },
+        ]
       } : {
         id: element.id,
         nome: element.nome,
@@ -50,7 +58,15 @@ export class HomeComponent implements OnInit {
         cpf: element.cpf,
         telefone: element.telefone,
         celular: element.celular,
-        enderecos: element.enderecos,
+        enderecos: [
+          { rua: element.enderecos[0] },
+          { numero: element.enderecos[1] },
+          { bairro: element.enderecos[2] },
+          { cidade: element.enderecos[3] },
+          { cep: element.enderecos[4] },
+          { estado: element.enderecos[5] },
+          { pais: element.enderecos[6] },
+        ]
         } 
     });
 
