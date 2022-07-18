@@ -61,68 +61,6 @@
           "pais": "teste"
         }
       ]
-    },
-    {
-      "id": 3,
-      "nome": "Ricardo",
-      "email": "ricardo@gmail.com",
-      "cpf": 78237048032,
-      "telefone": 7932587745,
-      "celular": 79988548756,
-      "enderecos": [
-        {
-          "rua": "rua testando"
-        },
-        {
-          "numero": 48
-        },
-        {
-          "bairro": "bairro teste"
-        },
-        {
-          "cidade": "teste"
-        },
-        {
-          "cep": 49160000
-        },
-        {
-          "estado": "SE"
-        },
-        {
-          "pais": "Brasil"
-        }
-      ]
-    },
-    {
-      "nome": "Freedman",
-      "email": "freedman@gmail.com",
-      "cpf": 51412644089,
-      "telefone": 7932548963,
-      "celular": 79988569852,
-      "enderecos": [
-        {
-          "rua": "treta"
-        },
-        {
-          "numero": 35
-        },
-        {
-          "bairro": "fernando collor"
-        },
-        {
-          "cidade": "aracaji"
-        },
-        {
-          "cep": 49160000
-        },
-        {
-          "estado": "SE"
-        },
-        {
-          "pais": "teste"
-        }
-      ],
-      "id": 4
     }
   ]
 }
