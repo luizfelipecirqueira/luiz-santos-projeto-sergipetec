@@ -4,52 +4,81 @@
   <form #f="ngForm">
     <mat-form-field appearance="fill">
       <mat-label>Nome</mat-label>
-      <input type="text" matInput [(ngModel)]="data.nome" name="nome" required>
+      <input type="text" matInput [(ngModel)]="data.nome" name="nome" placeholder="Digite o nome" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
-      <input type="text" matInput [(ngModel)]="data.email" name="email" required>
+      <input type="text" matInput [(ngModel)]="data.email" name="email" placeholder="Digite o email" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Cpf</mat-label>
-      <input type="number" matInput [(ngModel)]="data.cpf" name="cpf" required>
+      <input type="number" matInput [(ngModel)]="data.cpf" name="cpf" placeholder="Digite o cpf" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Telefone</mat-label>
-      <input type="number" matInput [(ngModel)]="data.telefone" name="telefone" required>
+      <input type="number" matInput [(ngModel)]="data.telefone" name="telefone" placeholder="Digite o telefone"
+        required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Celular</mat-label>
-      <input type="number" matInput [(ngModel)]="data.celular" name="celular" required>
+      <input type="number" matInput [(ngModel)]="data.celular" name="celular" placeholder="Digite o celular" required>
     </mat-form-field>
     <mat-label>Endereços</mat-label>
     <mat-form-field appearance="fill">
       <mat-label>Rua</mat-label>
-      <input type="text" matInput [(ngModel)]="data.enderecos[0].rua" name="endereco" required>
+      <input type="text" matInput [(ngModel)]="data.enderecos[0].rua" name="rua" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Número</mat-label>
-      <input type="number" matInput [(ngModel)]="data.enderecos[1].numero" name="endereco" required>
+      <input type="number" matInput [(ngModel)]="data.enderecos[1].numero" name="numero" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Bairro</mat-label>
-      <input type="text" matInput [(ngModel)]="data.enderecos[2].bairro" name="endereco" required>
+      <input type="text" matInput [(ngModel)]="data.enderecos[2].bairro" name="bairro" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Cidade</mat-label>
-      <input type="text" matInput [(ngModel)]="data.enderecos[3].cidade" name="endereco" required>
+      <input type="text" matInput [(ngModel)]="data.enderecos[3].cidade" name="cidade" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Cep</mat-label>
-      <input type="number" matInput [(ngModel)]="data.enderecos[4].cep" name="endereco" required>
+      <input type="number" matInput [(ngModel)]="data.enderecos[4].cep" name="cep" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Estado</mat-label>
-      <input type="text" matInput [(ngModel)]="data.enderecos[5].estado" name="endereco" required>
+      <mat-select  name="estado" [(ngModel)]="data.enderecos[5].estado">
+        <mat-option value="AC" >Acre</mat-option>
+        <mat-option value="AL" >Alagoas</mat-option>
+        <mat-option value="AP" >Amapá</mat-option>
+        <mat-option value="AM" >Amazonas</mat-option>
+        <mat-option value="BA" >Bahia</mat-option>
+        <mat-option value="CE" >Ceará</mat-option>
+        <mat-option value="DF" >Distrito Federal</mat-option>
+        <mat-option value="ES" >Espírito Santo</mat-option>
+        <mat-option value="GO" >Goiás</mat-option>
+        <mat-option value="MA" >Maranhão</mat-option>
+        <mat-option value="MT" >Mato Grosso</mat-option>
+        <mat-option value="MS" >Mato Grosso do Sul</mat-option>
+        <mat-option value="MG" >Minas Gerais</mat-option>
+        <mat-option value="PA" >Pará</mat-option>
+        <mat-option value="PB" >Paraíba</mat-option>
+        <mat-option value="PR"  >Paraná</mat-option>
+        <mat-option value="PE" >Pernambuco</mat-option>
+        <mat-option value="PI" >Piauí</mat-option>
+        <mat-option value="RJ" >Rio de Janeiro</mat-option>
+        <mat-option value="RN" >Rio Grande do Norte</mat-option>
+        <mat-option value="RS" >Rio Grande do Sul</mat-option>
+        <mat-option value="RO" >Rondônia</mat-option>
+        <mat-option value="RR" >Roraima</mat-option>
+        <mat-option value="SC" >Santa Catarina</mat-option>
+        <mat-option value="SP" >São Paulo</mat-option>
+        <mat-option value="SE" >Sergipe</mat-option>
+        <mat-option value="TO" >Tocantins</mat-option>
+      </mat-select>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Pais</mat-label>
-      <input type="text" matInput [(ngModel)]="data.enderecos[6].pais" name="endereco" required>
+      <input type="text" matInput [(ngModel)]="data.enderecos[6].pais" name="pais" required>
     </mat-form-field>
   </form>
 </div>

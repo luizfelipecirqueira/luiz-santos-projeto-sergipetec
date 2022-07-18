@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   openDialog(element: ContribuinteElement | null): void{
     const dialogRef = this.dialog.open(ContribuinteDialogComponent, {
-      width: '250px',
+      width: '270px',
       data: element === null ? {
         nome: '',
         email: '',
