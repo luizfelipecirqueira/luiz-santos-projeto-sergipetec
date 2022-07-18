@@ -9,41 +9,56 @@
       "celular": "79994003345",
       "enderecos": [
         {
-          "rua": "Pablo Picasso",
-          "numero": "43",
-          "bairro": "Suiça",
-          "cidade": "Aracaju",
-          "cep": "49000000",
-          "estado": "Sergipe",
-          "pais": "Brasil"
+          "rua": "teste"
         },
         {
-          "rua": "João Ribeiro",
-          "numero": "1003",
-          "bairro": "Cardoso",
-          "cidade": "Joinville",
-          "cep": "09530210",
-          "estado": "Santa Catarina",
-          "pais": "Brasil"
+          "numero": 49
+        },
+        {
+          "bairro": "teste"
+        },
+        {
+          "cidade": "teste"
+        },
+        {
+          "cep": 49160000
+        },
+        {
+          "estado": "teste"
+        },
+        {
+          "pais": "teste"
         }
       ]
     },
     {
       "id": 2,
-      "nome": "JOÃO AUGUSTO DE SOUZA",
-      "email": "jaugusto@gmail.com",
-      "cpf": "17737300023",
-      "telefone": "7932100055",
-      "celular": "799940033466",
+      "nome": "Luiz Felipe",
+      "email": "teste@gmail.com",
+      "cpf": 59279079034,
+      "telefone": 7932587745,
+      "celular": 79999998575,
       "enderecos": [
         {
-          "rua": "Romero Brito",
-          "numero": "59",
-          "bairro": "América",
-          "cidade": "Campo Grande",
-          "cep": "79002000",
-          "estado": "Mato Grosso do Sul",
-          "pais": "Brasil"
+          "rua": "teste"
+        },
+        {
+          "numero": 45
+        },
+        {
+          "bairro": "teste"
+        },
+        {
+          "cidade": "teste"
+        },
+        {
+          "cep": 49160000
+        },
+        {
+          "estado": "teste"
+        },
+        {
+          "pais": "teste"
         }
       ]
     }
