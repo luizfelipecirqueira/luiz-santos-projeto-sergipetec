@@ -4,24 +4,23 @@
   <form #f="ngForm">
     <mat-form-field appearance="fill">
       <mat-label>Nome</mat-label>
-      <input type="text" matInput [(ngModel)]="data.nome" name="nome" placeholder="Digite o nome" required>
+      <input type="text" matInput [(ngModel)]="data.nome" name="nome" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
-      <input type="text" matInput [(ngModel)]="data.email" name="email" placeholder="Digite o email" required>
+      <input type="email" matInput [(ngModel)]="data.email" email="true" name="email" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Cpf</mat-label>
-      <input type="text" matInput [(ngModel)]="data.cpf" mask="000.000.000-00" name="cpf" placeholder="Digite o cpf" required>
+      <input type="text" matInput [(ngModel)]="data.cpf" mask="000.000.000-00" name="cpf" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Telefone</mat-label>
-      <input type="text" matInput [(ngModel)]="data.telefone" mask="(000) 0000-0000" name="telefone" placeholder="Digite o telefone"
-        required>
+      <input type="text" matInput [(ngModel)]="data.telefone" mask="(000) 0000-0000" name="telefone" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Celular</mat-label>
-      <input type="text" matInput [(ngModel)]="data.celular" mask="(000) 0 0000-0000" name="celular" placeholder="Digite o celular" required>
+      <input type="text" matInput [(ngModel)]="data.celular" mask="(000) 0 0000-0000" name="celular" required>
     </mat-form-field>
     <mat-label>Endereços</mat-label>
     <mat-form-field appearance="fill">
@@ -84,7 +83,7 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onCancelar()">Cancelar</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="isChange">Editar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="isChange" [disabled]="!f.valid">Editar</button>
   <button mat-button [mat-dialog-close]="data" cdkFocusInitial *ngIf="!isChange"
     [disabled]="!f.valid">Cadastrar</button>
 </div>
