@@ -1,6 +1,6 @@
-<div>
+<div class>
 
-  <button mat-button color="primary" (click)="openDialog(null)">Cadastrar Contribuinte</button>
+  <button mat-button color="primary" class="button-topo" (click)="openDialog(null)">Cadastrar Contribuinte</button>
 
   <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
@@ -19,24 +19,24 @@
 
     <ng-container matColumnDef="cpf">
       <th mat-header-cell *matHeaderCellDef> CPF </th>
-      <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.cpf | mask: '000.000.000-00'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="telefone">
       <th mat-header-cell *matHeaderCellDef> Telefone </th>
-      <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.telefone | mask: '(000) 0000-0000'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="celular">
       <th mat-header-cell *matHeaderCellDef> Celular </th>
-      <td mat-cell *matCellDef="let element"> {{element.celular}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.celular | mask: '(000)0 0000-0000'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="enderecos">
       <th mat-header-cell *matHeaderCellDef> Endereço </th>
       <td mat-cell *matCellDef="let element"> {{element.enderecos[0].rua}}, {{element.enderecos[1].numero}},
         {{element.enderecos[2].bairro}}, {{element.enderecos[3].cidade}},
-        {{element.enderecos[4].cep}}, {{element.enderecos[5].estado}}, {{element.enderecos[6].pais}}
+        {{element.enderecos[4].cep | mask: '00.000-000'}}, {{element.enderecos[5].estado}}, {{element.enderecos[6].pais}}
       </td>
     </ng-container>
 

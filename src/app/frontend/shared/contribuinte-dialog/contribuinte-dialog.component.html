@@ -42,7 +42,7 @@
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Cep</mat-label>
-      <input type="number" matInput [(ngModel)]="data.enderecos[4].cep" name="cep" required>
+      <input type="text" matInput [(ngModel)]="data.enderecos[4].cep" mask="00.000-000" name="cep" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Estado</mat-label>
