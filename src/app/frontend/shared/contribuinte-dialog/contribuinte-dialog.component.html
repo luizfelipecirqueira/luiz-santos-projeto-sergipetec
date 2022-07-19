@@ -12,16 +12,16 @@
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Cpf</mat-label>
-      <input type="number" matInput [(ngModel)]="data.cpf" name="cpf" placeholder="Digite o cpf" required>
+      <input type="text" matInput [(ngModel)]="data.cpf" mask="000.000.000-00" name="cpf" placeholder="Digite o cpf" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Telefone</mat-label>
-      <input type="number" matInput [(ngModel)]="data.telefone" name="telefone" placeholder="Digite o telefone"
+      <input type="text" matInput [(ngModel)]="data.telefone" mask="(000) 0000-0000" name="telefone" placeholder="Digite o telefone"
         required>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Celular</mat-label>
-      <input type="number" matInput [(ngModel)]="data.celular" name="celular" placeholder="Digite o celular" required>
+      <input type="text" matInput [(ngModel)]="data.celular" mask="(000) 0 0000-0000" name="celular" placeholder="Digite o celular" required>
     </mat-form-field>
     <mat-label>Endereços</mat-label>
     <mat-form-field appearance="fill">

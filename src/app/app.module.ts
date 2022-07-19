@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
 
 
 
@@ -42,7 +44,8 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
